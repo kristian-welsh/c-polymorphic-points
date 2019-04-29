@@ -1,0 +1,4 @@
+*.stackdump
+build.cmd
+run.cmd
+
