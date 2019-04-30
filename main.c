@@ -27,14 +27,22 @@ void printInjected(Point* injection)
 
 int main()
 {
+		Point *polar = (Point*)new_PolarPoint(45, 1.414);
+		Point *cartesian = (Point*)new_CartesianPoint(2, 1);
+
     printf("input: (1, 1)\n");
-    
     printCartesian();
     printPolar();
+
     printf("Cartesian ");
-    printInjected((Point*)new_CartesianPoint(1, 1));
+    printInjected(cartesian);
+		cartesian->rotate90(cartesian);
+    printInjected(cartesian);
+
     printf("Polar ");
-    printInjected((Point*)new_PolarPoint(45, 1.41421356));
+    printInjected(polar);
+		polar->rotate90(polar);
+    printInjected(polar);
     
     return 0;
 }
