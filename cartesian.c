@@ -16,7 +16,7 @@ void rotate90_C(CartesianPoint self)
 {
 		float oldx = self.x;
 		self.x = -self.y;
-		self.y = -oldx;
+		self.y = oldx;
 }
 
 CartesianPoint* new_CartesianPoint(float x, float y)

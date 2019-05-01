@@ -15,6 +15,10 @@ char* describe_P(PolarPoint self)
 void rotate90_P(PolarPoint self)
 {
 		self.theta += 90;
+		if(self.theta > 360)
+		{
+				self.theta -= 360;
+		}
 }
 
 PolarPoint* new_PolarPoint(float theta, float length)
